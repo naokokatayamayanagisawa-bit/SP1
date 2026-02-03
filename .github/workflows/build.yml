@@ -13,10 +13,10 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore NuGet packages
-      run: nuget restore DENSOScannerSDK_Demo.sln
+      run: nuget restore DENSOScannerSDK_Demo/DENSOScannerSDK_Demo.sln
 
     - name: Build solution
-      run: msbuild DENSOScannerSDK_Demo.sln /p:Configuration=Release
+      run: msbuild DENSOScannerSDK_Demo/DENSOScannerSDK_Demo.sln /p:Configuration=Release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
